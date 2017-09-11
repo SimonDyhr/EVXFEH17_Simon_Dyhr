@@ -16,7 +16,9 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
-}*/
+}
+
+En normalizer*/
 
 
 
@@ -29,48 +31,48 @@ body{
     margin: auto;
 }
 
-header{
+#wrapper{
     padding-left: 10px;
 }
 
-header h2{
+#wrapper h2{
     display: inline-block;
 }
 
-header nav{
+#wrapper nav{
     list-style: none;
     display: inline-block;
 }
 
-header li{
+#wrapper li{
     display: inline;
     margin: 5px;
 }
 
-body article{
+#main-content article{
     background: #ffffff;
     margin: 8px 8px;
     box-shadow: 2px 2px 1px #DFDFDF;
 }
 
-body article:hover{
+#main-content article:hover{
     box-shadow: 3px 3px 1px #DFDFDF;
 }
 
-body article p{
+#main-content article p{
     padding: 15px;
     padding-bottom: 0px;
 }
 
-body article figure{
+#main-content article figure{
     padding: 15px;
     margin: 0;
 }
 
-body aside{
+#outsideMain {
     padding-left: 10px;
 }
 
-body footer{
+#contactFooter {
     padding-left: 10px;
 }
