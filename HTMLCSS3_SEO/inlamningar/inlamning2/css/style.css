@@ -110,3 +110,9 @@ a:active {
 .blogg_summary > span{
     color: yellow;
 }
+
+
+.contact{
+    text-align: center;
+    margin-top: 0.5em;
+}
