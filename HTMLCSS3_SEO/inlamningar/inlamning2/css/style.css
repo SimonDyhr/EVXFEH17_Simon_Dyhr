@@ -1,0 +1,64 @@
+* {
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e9967a;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+}
+
+/* Inga listor skall ha punkter på sig */
+#wrapper ul {
+    list-style: none;
+    background-color: #333;
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+#wrapper li {
+    display: inline-block;
+    float: none;
+    text-align:center;
+    width:20%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+}
+
+#wrapper li:hover {
+    background-color: #555;
+}
+
+
+/* Inga länkar skall vara understrukna */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+.logo h2 + h3{
+    color: greenyellow;
+}
+
+
+.syndicate {
+    
+}
