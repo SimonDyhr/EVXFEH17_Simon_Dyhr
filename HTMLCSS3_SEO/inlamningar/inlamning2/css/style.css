@@ -1,3 +1,4 @@
+/* Generella regler överlag */
 * {
     font-family: 'Merriweather', serif;
     padding: 0;
@@ -12,11 +13,13 @@ body {
     margin: auto;
 }
 
+/* Inga listor skall ha punkter på sig */
 ul {
     list-style: none;
 }
 
-/* Inga listor skall ha punkter på sig */
+
+/* Headern med huvudmenyn i */
 #wrapper ul {
     background-color: #333;
     width: 100%;
@@ -60,12 +63,12 @@ a:active {
     color: inherit;
 }
 
-
+/* Använt adjacent sibling selector för att färga H3 */
 .logo h2 + h3{
     color: greenyellow;
 }
 
-
+/* Generell CSS för artiklarna på sidan som har Syndicate classen taggad i sig */
 .syndicate{
     background-color: slategrey;
     margin: 1em;
@@ -82,7 +85,7 @@ a:active {
     margin-bottom: 0.5em;
 }
 
-.syndicate h4{
+.syndicate footer{
     color: whitesmoke;
     padding: 0.5em;
 }
@@ -93,6 +96,8 @@ a:active {
     text-align: center;
 }
 
+
+/* För aside som ligger precis under artiklarna */
 .blogg_summary{
     text-align: center;
     background-color: #E98668;
@@ -107,19 +112,25 @@ a:active {
     color: red;
 }
 
+/* Child selector */
 .blogg_summary > span{
     color: yellow;
 }
 
+
+/* För next article länken */
 #nextArticle:hover{
     color: #414141;
 }
 
+
+/* Footern för sidan */
 .contact{
     text-align: center;
     margin-top: 0.5em;
 }
 
+/* General sibling combinator */
 .tel ~ .web{
     color: white;
 }
