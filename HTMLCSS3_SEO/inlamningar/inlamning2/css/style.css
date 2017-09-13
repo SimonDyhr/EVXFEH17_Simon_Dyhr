@@ -32,9 +32,13 @@ ul {
     float: none;
     text-align:center;
     width:20%;
+    color: white;
+}
+
+#wrapper a {
+    display: block;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: white;
 }
 
 #wrapper li:hover {
