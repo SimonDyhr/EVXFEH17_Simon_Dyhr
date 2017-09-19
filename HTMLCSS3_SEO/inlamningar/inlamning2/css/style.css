@@ -138,3 +138,8 @@ a:active {
 .tel ~ .web{
     color: white;
 }
+
+
+a:nth-child(even) .syndicate{
+background-color: black !important;
+}
