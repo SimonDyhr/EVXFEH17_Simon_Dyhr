@@ -1,0 +1,145 @@
+/* Generella regler överlag */
+* {
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9967a;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+}
+
+/* Inga listor skall ha punkter på sig */
+ul {
+    list-style: none;
+}
+
+
+/* Headern med huvudmenyn i */
+#wrapper ul {
+    background-color: #333;
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+#wrapper li {
+    display: inline-block;
+    float: none;
+    text-align:center;
+    width:20%;
+    color: white;
+}
+
+#wrapper a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#wrapper li:hover {
+    background-color: #555;
+}
+
+
+/* Inga länkar skall vara understrukna och att den ska inherita färgen så den inte är blå eller något annat fult */
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Använt adjacent sibling selector för att färga H3 */
+.logo h2 + h3{
+    color: greenyellow;
+}
+
+/* Generell CSS för artiklarna på sidan som har Syndicate classen taggad i sig */
+.syndicate{
+    background-color: slategrey;
+    margin: 1em;
+    box-shadow: 0px 2px 0px purple;
+}
+
+.syndicate:hover{
+    box-shadow: 0px 2px 2px #000000;
+}
+
+.syndicate p{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.syndicate footer{
+    color: whitesmoke;
+    padding: 0.5em;
+}
+
+.syndicate h3{
+    color: purple;
+    padding: 0.5em;
+    text-align: center;
+}
+
+
+/* För aside som ligger precis under artiklarna */
+.blogg_summary{
+    text-align: center;
+    background-color: #E98668;
+}
+
+.blogg_summary li{
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.blogg_summary li:hover{
+    color: red;
+}
+
+/* Child selector */
+.blogg_summary > span{
+    color: yellow;
+}
+
+
+/* För next article länken */
+#nextArticle:hover{
+    color: #414141;
+}
+
+
+/* Footern för sidan */
+.contact{
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+/* General sibling combinator */
+.tel ~ .web{
+    color: white;
+}
+
+
+a:nth-child(even) .syndicate{
+background-color: black !important;
+}
