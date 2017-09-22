@@ -1,16 +1,17 @@
 /* Generella regler överlag */
 * {
-    font-family: 'Merriweather', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #e9967a;
+    background-color: #e9ebee;
     width: 100%;
     max-width: 50em;
     margin: auto;
+    padding-top: 45px; /* Så att menyn inte överlappar contenten högst upp */
 }
 
 /* Inga listor skall ha punkter på sig */
@@ -18,32 +19,82 @@ ul {
     list-style: none;
 }
 
-
-/* Headern med huvudmenyn i */
-#wrapper ul {
-    background-color: #333;
-    width: 100%;
-    display: table;
-    text-align: center;
+/*Dold chekcbox som aldrig visas*/
+#nav-toggle {
+    display: none;
 }
 
-#wrapper li {
-    display: inline-block;
-    float: none;
-    text-align:center;
-    width:20%;
-    color: white;
+/* Var tvungen att sätta @media här så jag inte stör desktopen sen */
+@media all and (max-width: 630px){
+/*Men som används för att dölja och visa menyn på mobilen*/
+#nav-toggle:checked + #wrapper nav {
+    position: fixed;
+    top: 45px;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
 }
 
-#wrapper a {
+#nav-toggle + #wrapper #pilUpp {
+    display: none;
+}
+#nav-toggle + #wrapper #pilNer {
     display: block;
+}
+#nav-toggle:checked + #wrapper #pilUpp {
+    display: block;
+}
+#nav-toggle:checked + #wrapper #pilNer {
+    display: none;
+}
+
+/* Menyn, för MOBILE döljs som standard */
+nav{
+    position: fixed;
+    top: -1000px;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 45px;
+    background: #ECECEC;
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+    overflow: auto;
+}
+
+
+
+nav ul li ul{
+    padding-left: 20px;
+    color: #747474;
+}
+
+nav ul li ul li ul{
+    color: #E100FF;
+}
+}
+
+#labelForNavToggle{
+    background-color: #2ecc71;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+    font-weight: bold;
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
 }
 
-#wrapper li:hover {
-    background-color: #555;
+#labelForNavToggle span{
+    float: right;
+    padding-right: 10px;
 }
+
 
 
 /* Inga länkar skall vara understrukna och att den ska inherita färgen så den inte är blå eller något annat fult */
@@ -72,39 +123,61 @@ a:active {
     color: greenyellow;
 }
 
+.logo{
+    display: none;
+}
+
 /* Generell CSS för artiklarna på sidan som har Syndicate classen taggad i sig */
 .syndicate{
-    background-color: slategrey;
+    background-color: white;
     margin: 1em;
-    box-shadow: 0px 2px 0px purple;
+    border: 1px solid #E3E5E7;
+    border-radius: 4px;
+}
+
+a:nth-child(3n+2) .syndicate{
+    background: slategray;
 }
 
 .syndicate:hover{
-    box-shadow: 0px 2px 2px #000000;
+    box-shadow: 0px 0px 0px 0.8px #E0E0E0;
 }
 
 .syndicate p{
-    color: whitesmoke;
-    padding: 0.5em;
+    color: #1d2129;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.38;
+    padding: 0.7em;
     margin-bottom: 0.5em;
 }
 
 .syndicate footer{
-    color: whitesmoke;
-    padding: 0.5em;
+    color: #6D6D6D;
+    padding: 0.7em;
 }
 
 .syndicate h3{
-    color: purple;
-    padding: 0.5em;
-    text-align: center;
+    color: #27ae60;
+    padding: 0.7em;
+    padding-bottom: 0.1em;
+    padding-left: 0.5em;
+    text-align: left;
+    line-height: 1.38;
+}
+
+.line-separator{
+    width: 97%;
+    margin: auto;
+    height:1px;
+    border-bottom:1px solid #DFDFDF;
 }
 
 
 /* För aside som ligger precis under artiklarna */
 .blogg_summary{
     text-align: center;
-    background-color: #E98668;
+    background-color: #ffffff;
 }
 
 .blogg_summary li{
@@ -118,7 +191,7 @@ a:active {
 
 /* Child selector */
 .blogg_summary > span{
-    color: yellow;
+    color: gray;
 }
 
 
@@ -136,10 +209,120 @@ a:active {
 
 /* General sibling combinator */
 .tel ~ .web{
-    color: white;
+    color: black;
 }
 
 
-a:nth-child(even) .syndicate{
-background-color: black !important;
+/* a:nth-child(even) .syndicate{
+background-color: white !important;
+} */
+
+
+
+
+
+/* Menyn för Desktop */
+@media all and (min-width: 630px){
+
+/* Måste displaya NAV igen när man går tillbaks till Desktop */
+nav{
+    display: block;
+    padding: 0;
+    left:auto;
+    top:0;
+    position: fixed;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+}
+
+/*Tecknet för mobil menyn döljs på desktop*/
+#labelForNavToggle {
+    display:none;
+}
+
+/* Headern med huvudmenyn i */
+#mainMenu {
+    background-color: #2ecc71;
+    width: 100%;
+    display: table;
+    text-align: center;
+}
+
+#mainMenu > li {
+    display: inline-block;
+    float: none;
+    text-align:center;
+    width:20%;
+    color: white;
+}
+
+#mainMenu li a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#mainMenu li > a:hover {
+    background-color: #27ae60;
+}
+
+/* CSS för första leveln av Dropdown */
+ul li ul#dropdown-menu-level1{
+    width: 100%;
+    max-width: 160px;
+	display:none;
+    position:absolute;
+    color: black;
+    background: rgba(255, 255, 255, 0.99);
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+}
+
+ul li:hover ul#dropdown-menu-level1{
+    display: block;	/* Display the dropdown */
+}
+
+
+/* CSS för andra leveln av Dropdown */
+ul li ul li ul#dropdown-menu-level2{
+    width: 100%;
+    max-width: 160px;
+    display:none;
+	position:absolute;
+    background: rgba(248, 248, 248, 0.99);
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+    left: 100%;
+    margin-top: -45px; /* Så att menyn som poppas ut är jämn med menyn bredvid */
+}
+
+ul li ul li:hover ul#dropdown-menu-level2{
+    display: block;	/* Display the dropdown */
+}
+
+ul li ul:last-child{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+ #mainMenu ul li:last-child a:hover {
+    background: #ECECEC !important;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#mainMenu li ul li > a:hover {
+    background: #ECECEC !important;
+}
+
+#dropdown-menu-level2 span{
+    -moz-box-shadow:    inset 0 0 2px rgb(221, 221, 221);
+    -webkit-box-shadow: inset 0 0 2px rgb(221, 221, 221);
+    box-shadow:         inset 0 0 2px rgb(221, 221, 221);
+    background: white;
+    padding: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 20px;
+    font-size: 10px;
+}
 }

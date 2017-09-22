@@ -11,14 +11,61 @@
 <body>
 
     <!-- Headern som innehåller huvudmenyn, ID döpt till wrapper -->
+    <input type="checkbox" id="nav-toggle">
     <header id="wrapper">
+    <label id="labelForNavToggle" for="nav-toggle">Volvo<span id="pilNer">&#x25BC;</span><span id="pilUpp">&#x25B2;</span></label>
         <nav>
-            <ul>
-                <li><a href="#">Meny1</a></li>
-                <li><a href="#">Meny2</a></li>
-                <li><a href="#">Meny3</a></li>
-                <li><a href="#">Meny4</a></li>
-                <li><a href="#">Meny5</a></li>
+            <ul id="mainMenu">
+                <li><a href="#">Meny1</a>
+                    <ul id="dropdown-menu-level1">
+                        <li><a href="#">u1</a>
+                            <ul id="dropdown-menu-level2">
+                                <li><a href="#">uu1<span>10</span></a></li>
+                                <li><a href="#">uu2<span>20</span></a></li>
+                                <li><a href="#">uu3<span>30</span></a></li>
+                                <li><a href="#">uu4<span>40</span></a></li>
+                                <li><a href="#">uu5<span>50</span></a></li>
+                                <li><a href="#">uu6<span>60</span></a></li>
+                                <li><a href="#">uu7<span>70</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">u2</a></li>
+                        <li><a href="#">u3</a></li>
+                        <li><a href="#">u4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Meny2</a>
+                    <ul id="dropdown-menu-level1">
+                        <li><a href="#">u1</a></li>
+                        <li><a href="#">u2</a></li>
+                        <li><a href="#">u3</a></li>
+                        <li><a href="#">u4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Meny3</a>
+                    <ul id="dropdown-menu-level1">
+                        <li><a href="#">u1</a></li>
+                        <li><a href="#">u2</a></li>
+                        <li><a href="#">u3</a></li>
+                        <li><a href="#">u4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Meny4</a>
+                    <ul id="dropdown-menu-level1">
+                        <li><a href="#">u1</a></li>
+                        <li><a href="#">u2</a></li>
+                        <li><a href="#">u3</a></li>
+                        <li><a href="#">u4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Meny5</a>
+                    <ul id="dropdown-menu-level1">
+                        <li><a href="#">u1</a></li>
+                        <li><a href="#">u2</a></li>
+                        <li><a href="#">u3</a></li>
+                        <li><a href="#">u4</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -31,7 +78,7 @@
     </div>
 
     <!-- detta är main content för sidan, där article har fått tilldelad class="syndicate" -->
-    <section>
+    <section id="main-content">
         <a href="#">
             <article class="syndicate">
                 <header>
@@ -41,7 +88,7 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-
+                <div class="line-separator"></div>
                 <footer>
                     <h4>1 Juni</h4>
                 </footer>
@@ -57,7 +104,7 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam faucibus purus in massa tempor nec feugiat nisl. Sit amet cursus sit amet dictum sit amet justo. Aliquam ut porttitor leo a diam sollicitudin. Quam vulputate dignissim suspendisse in est. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Amet dictum sit amet justo donec enim. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Eleifend donec pretium vulputate sapien nec sagittis aliquam. Est ante in nibh mauris cursus mattis molestie a iaculis. Blandit aliquam etiam erat velit scelerisque. Tristique risus nec feugiat in fermentum.</p>
                 </div>
-    
+                <div class="line-separator"></div>
                 <footer>
                     <h4>2 Juni</h4>
                 </footer>
@@ -73,7 +120,7 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse sed nisi lacus sed viverra tellus in hac. Sed viverra ipsum nunc aliquet bibendum. Turpis cursus in hac habitasse platea dictumst quisque sagittis purus. Diam vulputate ut pharetra sit amet aliquam id. Nisl pretium fusce id velit. Nunc non blandit massa enim nec dui. Ultricies lacus sed turpis tincidunt id aliquet risus. At volutpat diam ut venenatis tellus in. Molestie at elementum eu facilisis sed odio morbi quis. Venenatis urna cursus eget nunc scelerisque. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Egestas dui id ornare arcu odio ut sem nulla pharetra. Tellus orci ac auctor augue mauris augue neque gravida. Sit amet nisl purus in mollis nunc sed id. Ut lectus arcu bibendum at varius vel pharetra vel.</p>
                 </div>
-    
+                <div class="line-separator"></div>
                 <footer>
                     <h4>3 Juni</h4>
                 </footer>
@@ -89,7 +136,7 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget arcu dictum varius duis at consectetur lorem donec. Non tellus orci ac auctor augue mauris augue neque. Ullamcorper morbi tincidunt ornare massa. Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Cum sociis natoque penatibus et. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Ut venenatis tellus in metus vulputate eu scelerisque felis. Cursus metus aliquam eleifend mi in nulla. Cras ornare arcu dui vivamus arcu felis bibendum. Magnis dis parturient montes nascetur ridiculus. Pretium quam vulputate dignissim suspendisse in est ante in. Sit amet volutpat consequat mauris. Sodales neque sodales ut etiam sit amet nisl. Mauris nunc congue nisi vitae suscipit tellus mauris. Risus pretium quam vulputate dignissim suspendisse in. Scelerisque varius morbi enim nunc faucibus a pellentesque. Amet luctus venenatis lectus magna. Mauris pharetra et ultrices neque ornare aenean euismod elementum. Vestibulum lectus mauris ultrices eros in cursus.</p>
                 </div>
-        
+                <div class="line-separator"></div>
                 <footer>
                     <h4>4 Juni</h4>
                 </footer>
@@ -105,9 +152,57 @@
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut porttitor leo a diam sollicitudin tempor id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Bibendum at varius vel pharetra. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Viverra vitae congue eu consequat ac felis donec et. In hendrerit gravida rutrum quisque non tellus orci. Faucibus scelerisque eleifend donec pretium. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Morbi blandit cursus risus at ultrices mi.</p>
                 </div>
-            
+                <div class="line-separator"></div>
                 <footer>
                     <h4>5 Juni</h4>
+                </footer>
+            </article>
+        </a>
+
+        <a href="#">
+            <article class="syndicate">
+                <header>
+                    <h3>Blog article 6</h3>
+                </header>
+                
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut porttitor leo a diam sollicitudin tempor id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Bibendum at varius vel pharetra. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Viverra vitae congue eu consequat ac felis donec et. In hendrerit gravida rutrum quisque non tellus orci. Faucibus scelerisque eleifend donec pretium. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Morbi blandit cursus risus at ultrices mi.</p>
+                </div>
+                <div class="line-separator"></div>
+                <footer>
+                    <h4>6 Juni</h4>
+                </footer>
+            </article>
+        </a>
+
+        <a href="#">
+            <article class="syndicate">
+                <header>
+                    <h3>Blog article 7</h3>
+                </header>
+                
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut porttitor leo a diam sollicitudin tempor id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Bibendum at varius vel pharetra. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Viverra vitae congue eu consequat ac felis donec et. In hendrerit gravida rutrum quisque non tellus orci. Faucibus scelerisque eleifend donec pretium. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Morbi blandit cursus risus at ultrices mi.</p>
+                </div>
+                <div class="line-separator"></div>
+                <footer>
+                    <h4>7 Juni</h4>
+                </footer>
+            </article>
+        </a>
+
+        <a href="#">
+            <article class="syndicate">
+                <header>
+                    <h3>Blog article 8</h3>
+                </header>
+                
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut porttitor leo a diam sollicitudin tempor id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Bibendum at varius vel pharetra. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Viverra vitae congue eu consequat ac felis donec et. In hendrerit gravida rutrum quisque non tellus orci. Faucibus scelerisque eleifend donec pretium. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Morbi blandit cursus risus at ultrices mi.</p>
+                </div>
+                <div class="line-separator"></div>
+                <footer>
+                    <h4>8 Juni</h4>
                 </footer>
             </article>
         </a>
