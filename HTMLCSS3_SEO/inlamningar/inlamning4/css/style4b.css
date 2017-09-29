@@ -1,0 +1,280 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e9ebee;
+    width: 100%;
+    margin: auto;
+}
+.Logga i{
+    font-size: 2.5em;
+    padding-right: 1em;
+}
+.wrapper{
+    text-align: center;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+/* kodblock nedan är för att dölja och visa menyn i mobilt läge */
+label{
+    color: black;
+    line-height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+.menyn{
+    display: none;
+}
+#nav-toggle{
+    display: none;
+}
+#nav-toggle:checked + header nav .menyn{
+    display: flex;
+}
+/* Styling och för att visa sidebaren längst ner på mobilen */
+#sidebar{
+    order: 2;
+    background-color: gray;
+    color: white;
+    padding: 15px;
+}
+/* Styling för copyright-rutan längst ner på hemsidan */
+#copyright{
+    text-align: center;
+    margin: 5px;
+}
+/* För att generellt sätta så att h1 och h2 läggs på samma rad */
+h1,h2{
+    display: inline;
+}
+a:link{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:visited{
+    color: whitesmoke;
+}
+
+/* Menyn */
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+nav ul li{
+    list-style: none;
+    text-align: center;
+}
+nav ul li a{
+    display: block;
+    padding: 12px;
+}
+nav ul li:hover a{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+nav ul li a i{
+    font-size: 1em;
+}
+nav li:nth-child(1){
+    background-color: #00B624;
+}
+nav li:nth-child(2){
+    background-color: #147DDF
+}
+nav li:nth-child(3){
+    background-color: #A500CE
+}
+nav li:nth-child(4){
+    background-color: #17A0DB
+}
+nav li:nth-child(5){
+    background-color: #EB0071
+}
+nav li:nth-child(6){
+    background-color: #26008D;
+}
+
+/* Fyllningstexten på sidan. Sätter en enkel margin bara, behövs inget mer. */
+.white-text{
+    margin: 10px;
+}
+/* Generell CSS för artiklarna på sidan som har Syndicate classen taggad i sig */
+.Articles{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.syndicate{
+    background-color: white;
+    border: 1px solid #E3E5E7;
+    border-radius: 4px;
+    position: relative;
+    z-index:2; /* Så att FIXED kommer över RELATIVE */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+#Article-item:nth-child(1) .syndicate{
+    background-color: #FFFFFF;
+}
+#Article-item:nth-child(2) .syndicate{
+    background-color: #ECECEC;
+}
+#Article-item:nth-child(3) .syndicate{
+    background-color: #C7C7C7;
+}
+
+.syndicate:hover{
+    box-shadow: 0px 0px 0px 0.8px #E0E0E0;
+}
+
+
+.syndicate p{
+    color: #1d2129;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.38;
+    padding: 0.7em;
+    margin-bottom: 5px;
+}
+.syndicate footer{
+    display: flex;
+    justify-content: center;
+}
+
+.syndicate footer #article-Icon {
+    color: #6D6D6D;
+    padding: 0.7em;
+}
+
+.syndicate footer #article-Icon i:hover {
+    color: #0099FF;
+}
+
+/* Titeln för varje Artikel (Flex-Card) */
+.syndicate h3{
+    color: #FFFFFF;
+    padding: 0.4em;
+    text-align: left;
+    line-height: 1.38;
+    font-size: 120%;
+    font-weight: 700;
+    background-color:#2ecc71;
+}
+
+.syndicate #article-Text {
+    flex-grow: 1;
+}
+
+.line-separator{
+    width: 97%;
+    height:1px;
+    border-bottom:1px solid #DFDFDF;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 40px;
+}
+
+.syndicateSplit{
+    color: #FFFFFF;
+    padding: 0.4em;
+    text-align: left;
+    line-height: 1.38;
+    font-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color:#27ae60;
+}
+
+.syndicateSplit i {
+    margin-right: 6px;
+}
+
+.syndicate img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* Brytpunkt för mobilt och desktop-läge */
+@media all and (min-width: 816px){
+/*Tecknet för mobil menyn döljs på desktop*/
+.syndicate {
+    margin: 5px;
+}
+
+label{
+    display:none;
+}
+
+/* för att alltid visa menyn i desktopläge */
+header nav .menyn{
+    display: flex;
+}
+
+/* Sätter hela main-content som flexbox. Med andra ord allt i som lägger sig i body typ */
+.main-content{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+}
+.Logga{
+    text-align: right;
+    padding: 10px;
+}
+.wrapper{
+    flex-direction: row;
+    display: flex;
+    display: inline;
+}
+.menyn{
+    justify-content: flex-end;
+}
+nav{
+    justify-content: flex-end;
+}
+nav ul{
+    flex-direction: row;
+}
+.wrapper nav ul li{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#sidebar{
+    order: 0;
+    flex-direction: column;
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.main-content-middlerow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Article-item{
+    display: flex;
+    width: 50%;
+}
+#Article-item:nth-child(1n+3){
+    width: 100%;
+}
+
+}
