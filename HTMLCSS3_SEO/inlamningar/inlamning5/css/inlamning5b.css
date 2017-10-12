@@ -1,0 +1,351 @@
+/* Generella regler överlag */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9ebee;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+}
+
+/* Inga listor skall ha punkter på sig */
+ul {
+    list-style: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Dold chekcbox som aldrig visas*/
+#nav-toggle {
+    display: none;
+}
+
+.Articles{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1em;
+    padding: 10px;
+}
+
+#Article-item{
+    background: white;
+    overflow: hidden;
+}
+
+#Article-item img{
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-25%);
+    position: relative;
+}
+
+.Articles p {
+    text-align: center;
+}
+
+.labelTouch{
+    display: none;
+}
+
+/* Var tvungen att sätta @media här så jag inte stör desktopen sen */
+@media all and (max-width: 699px){
+    body {
+        padding-top: 45px; /* För att menyn i mobil är FIXED */
+    }
+
+    /*Men som används för att dölja och visa menyn på mobilen*/
+    #nav-toggle:checked + #wrapper nav {
+        position: fixed;
+        top: 40px;
+        -webkit-transition: 0.4s; /* Safari */
+        transition: 0.4s;
+    }
+
+    #nav-toggle + #wrapper #pilUpp {
+        display: none;
+    }
+    #nav-toggle + #wrapper #pilNer {
+        display: block;
+    }
+    #nav-toggle:checked + #wrapper #pilUpp {
+        display: block;
+    }
+    #nav-toggle:checked + #wrapper #pilNer {
+        display: none;
+    }
+
+    /* Menyn, för MOBILE döljs som standard */
+    nav{
+        position: fixed;
+        top: -1000px;
+        text-transform: uppercase;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 45px;
+        background: #ECECEC;
+        box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+        width: 100%;
+        height: 100%;
+        -webkit-transition: 0.4s; /* Safari */
+        transition: 0.4s;
+        overflow: auto;
+        z-index:3; /* Så att FIXED kommer över RELATIVE */
+    }
+
+    nav ul li ul{
+        padding-left: 20px;
+        color: #747474;
+    }
+
+    nav ul li ul li ul{
+        color: #E100FF;
+    }
+
+    #labelForNavToggle{
+        background-color: #2ecc71;
+        width: 100%;
+        text-transform: uppercase;
+        color: white;
+        display: block;
+        font-weight: bold;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 10px;
+        top: 0;
+        position: fixed;
+        z-index:3; /* Så att FIXED kommer över RELATIVE */
+    }
+    
+    #labelForNavToggle span{
+        float: right;
+        padding-right: 10px;
+    }
+}
+
+
+
+/* För Platta */
+@media all and (min-width: 600px){
+    .Articles{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1em;
+        padding: 10px;
+    }
+
+    #Article-item{
+        background: white;
+        overflow: hidden;
+    }
+
+    #Article-item img{
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%);
+        position: relative;
+    }
+
+    .Articles p {
+        text-align: center;
+    }
+}
+
+
+/* För Desktop */
+@media all and (min-width: 700px){
+    
+    /* Måste displaya NAV igen när man går tillbaks till Desktop */
+    nav{
+        display: block;
+        top:0;
+        width: 100%;
+        max-width: 30em;
+        z-index:3; /* Så att FIXED kommer över RELATIVE */
+    }
+    
+    /*Tecknet för mobil menyn döljs på desktop*/
+    #labelForNavToggle {
+        display:none;
+    }
+    
+    /* Headern med huvudmenyn i */
+    #mainMenu {
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+
+    #mainMenu > li::before{
+        position: absolute;
+        display: block;
+        top: 10px;
+        content: "/";
+    }
+
+    #mainMenu > li:first-child::before{
+        content: "";
+    }
+    
+    #mainMenu > li {
+        color: black;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    #mainMenu li a {
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    /* CSS för första leveln av Dropdown */
+    ul li ul#dropdown-menu-level1{
+        width: 100%;
+        max-width: 110px;
+        display:none;
+        position:absolute;
+        color: black;
+        background: rgba(255, 255, 255, 0.99);
+        box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+    }
+    
+    ul li:hover ul#dropdown-menu-level1{
+        display: flex;	/* Display the dropdown */
+        flex-direction: column;
+    }
+    
+    
+    /* CSS för andra leveln av Dropdown */
+    ul li ul li ul#dropdown-menu-level2{
+        width: 100%;
+        max-width: 110px;
+        display:none;
+        position:absolute;
+        background: rgba(248, 248, 248, 0.99);
+        box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+        left: 100%;
+        margin-top: -42px; /* Så att menyn som poppas ut är jämn med menyn bredvid */
+    }
+    
+    ul li ul li:hover ul#dropdown-menu-level2{
+        display: flex;	/* Display the dropdown */
+        flex-direction: column;
+    }
+    
+    ul li ul:last-child{
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+     #mainMenu ul li:last-child a:hover {
+        background: #ECECEC !important;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    
+    #mainMenu li ul li > a:hover {
+        background: #ECECEC !important;
+    }
+    
+    #dropdown-menu-level2 span{
+        -moz-box-shadow:    inset 0 0 2px rgb(221, 221, 221);
+        -webkit-box-shadow: inset 0 0 2px rgb(221, 221, 221);
+        box-shadow:         inset 0 0 2px rgb(221, 221, 221);
+        background: white;
+        padding: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+
+    .splitTop{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 1em;
+        padding-bottom: 20px;/* Så att vi får mellanrum mellan toppen och contenten */
+    }
+
+    .Articles{
+        display: grid;
+        grid-template-columns: auto auto 20% auto 20%;
+        grid-template-rows: 150px 150px 150px 150px;
+        grid-template-areas: 
+        "a b b c c"
+        "d b b e e"
+        "f f g e e"
+        "f f g e e";
+        grid-gap: 1em;
+        padding: 10px;
+    }
+
+    #Article-item{
+        background: white;
+        overflow: hidden;
+    }
+
+    #Article-item img{
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%);
+        position: relative;
+    }
+
+    .Articles p {
+        text-align: center;
+    }
+
+    #Article-item:nth-child(1){
+        grid-area: a;
+    }
+    #Article-item:nth-child(2){
+        grid-area: b;
+    }
+    #Article-item:nth-child(3){
+        grid-area: c;
+    }
+    #Article-item:nth-child(4){
+        grid-area: d;
+    }
+    #Article-item:nth-child(5){
+        grid-area: e;
+    }
+    #Article-item:nth-child(6){
+        grid-area: f;
+    }
+    #Article-item:nth-child(7){
+        grid-area: g;
+    }
+
+
+    .labelTouch{
+        display: block;
+        font-size: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 10px;
+    }
+}
