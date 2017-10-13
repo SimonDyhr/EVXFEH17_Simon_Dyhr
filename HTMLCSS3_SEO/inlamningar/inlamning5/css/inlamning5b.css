@@ -51,8 +51,8 @@ a:active {
 }
 
 #Article-item{
-    background: white;
     overflow: hidden;
+    border-top: 1px solid black;
 }
 
 #Article-item img{
@@ -64,6 +64,7 @@ a:active {
 
 .Articles p {
     text-align: center;
+    padding: 5px;
 }
 
 .labelTouch{
@@ -157,8 +158,8 @@ a:active {
     }
 
     #Article-item{
-        background: white;
         overflow: hidden;
+        border-top: 1px solid black;
     }
 
     #Article-item img{
@@ -303,8 +304,8 @@ a:active {
     }
 
     #Article-item{
-        background: white;
         overflow: hidden;
+        border-top: 1px solid black;
     }
 
     #Article-item img{
@@ -316,6 +317,7 @@ a:active {
 
     .Articles p {
         text-align: center;
+        padding: 5px;
     }
 
     #Article-item:nth-child(1){
