@@ -1,20 +1,262 @@
-﻿	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-	<meta charset="UTF-8">
-	<title></title>
-	<!--build:css css/styles.min.css-->
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/print.css">
-	<!--endbuild-->
-	</head>
-	<body>
-	This is a gulp starter!
-	<div class="testing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quia?</div>
-	<!--build:js js/main.min.js -->
-	<script src="js/lib/a-library.js"></script>
-	<script src="js/lib/another-library.js"></script>
-	<script src="js/main.js"></script>
-	<!-- endbuild -->
-	</body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css">
+  <!--endbuild-->
+</head>
+
+<body>
+  <nav role="navigation" id="nav">
+    <input class="trigger" type="checkbox" id="mainNavButton">
+    <label for="mainNavButton" class="menu" onclick>Menu</label>
+     <ul>
+       <li><a href="#">Hem</a></li>
+       <li class="submenu"><a href="#" title="Våran produktsortiment">Produkter</a>
+         <ul class="megamenu">
+           <ul>
+             <h4>Arbetsminne</h4>
+             <li><a href="#">DDR</a></li>
+             <li><a href="#">DDR2</a></li>
+             <li><a href="#">DDR3</a></li>
+             <li><a href="#">DDR4</a></li>
+             <li><a href="#">Notebooks</a></li>
+             <li><a href="#">Andra minnen</a></li>
+           </ul>
+           <ul>
+             <h4>Hårddiskar</h4>
+             <li><a href="#">Interna hårddiskar</a></li>
+             <li><a href="#">Extern hårddiskar </a></li>
+             <li><a href="#">SSD (Solid State Drive)</a></li>
+           </ul>
+           <ul>
+             <h4>Chassin & Nätaggregat</h4>
+             <li><a href="#">PC-chassin</a></li>
+             <li><a href="#">Hårddisk chassin</a></li>
+             <li><a href="#">Nätaggregat</a></li>
+             <li><a href="#">Kylning</a></li>
+             <li><a href="#">Tillbehör</a></li>
+           </ul>
+           <ul>
+             <h4>Grafikkort</h4>
+             <li><a href="#">AMD</a></li>
+             <li><a href="#">Nvidia</a></li>
+             <li><a href="#">Andra</a></li>
+             <li><a href="#">Kylning</a></li>
+             <li><a href="#">Tillbehör</a></li>
+           </ul>
+           <ul>
+             <h4>Enheter</h4>
+             <li><a href="#">Diskett enheter</a></li>
+             <li><a href="#">DVD</a></li>
+             <li><a href="#">Bluray</a></li>
+             <li><a href="#">Bandspelare</a></li>
+           </ul>
+           <ul>
+             <h4>Processor</h4>
+             <li><a href="#">AMD</a></li>
+             <li><a href="#">Intel</a></li>
+             <li><a href="#">Andra</a></li>
+             <li><a href="#">Kylning</a></li>
+             <li><a href="#">Tillbehör</a></li>
+           </ul>
+           
+           <ul>
+             <h4>Nätverk</h4>
+             <li><a href="#">Hubbar und Switchar</a></li>
+             <li><a href="#">Router</a></li>
+             <li><a href="#">Firewalls</a></li>
+             <li><a href="#">Powerline</a></li>
+             <li><a href="#">Kabel</a></li>
+           </ul>
+           
+           <ul>
+           <h4>Nyhetsbrev</h4>
+           <form >
+     
+     <ul class="flex-form">
+       
+       <li>
+       <label  for="first-name" class="form-label">First Name</label>
+       <input type="text" id="first-name" placeholder="Enter your first name here">
+       </li>
+       <li>
+       <label  for="last-name" class="form-label">Last Name</label>
+       <input type="text" id="last-name" placeholder="Enter your last name here">
+       </li>
+       <li>
+       <label  for="email" class="form-label">Email</label>
+       <input type="email" id="email" placeholder="Enter your email here">
+       </li>
+       <li>
+       <label  for="phone" class="form-label">Phone</label>
+       <input type="tel" id="phone" placeholder="Enter your phone nr here">
+       </li>
+       <!--<li>
+       <label  for="message" class="form-label">Message</label>
+       <textarea id="message" rows="6" placeholder="Enter your message here"> </textarea>
+       </li>-->
+       <li><button type="submit">Submit</button></li>
+       
+     </ul>
+     
+   </form>	
+           </ul>
+   
+         </ul>
+       </li>
+       <li><a href="#">Om oss</a></li>
+       <li><a href="#">Kontakt</a></li>
+       <li><a href="#">Avtryck</a></li>
+       <li><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp; 4</li>
+     <li><i class="fa fa-commenting-o" aria-hidden="true"></i>&nbsp; 9</li>
+   </ul>
+      
+          
+     
+   </nav>
+  
+  <!--build:js js/main.min.js -->
+  <script src="js/lib/a-library.js"></script>
+  <script src="js/lib/another-library.js"></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+
+
+
+  <section id="main-content">
+    <div class="Articles">
+        <a href="#" id="Article-item" class="one">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 1 </p>
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item" class="two">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 2 </p>
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 3 </p> 
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 4 </p> 
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 5 </p>
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 6 </p> 
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+
+        <a href="#" id="Article-item">
+            <article class="syndicate">
+                <header>
+                    <div class="line-separator"></div>
+                </header>
+
+                <div id="article-Text">
+                    <p> 7 </p> 
+                </div>
+
+                <div class="line-separator"></div>
+
+                <footer>
+                    <img src="media/bild1.jpg" alt="Nummer1">
+                </footer>
+            </article>
+        </a>
+    </div>
+</section>
+</body>
+
+</html>

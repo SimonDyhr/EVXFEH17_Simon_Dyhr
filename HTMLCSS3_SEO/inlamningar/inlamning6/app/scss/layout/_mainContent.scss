@@ -1,0 +1,107 @@
+/*sass map för breakpoints*/
+$breakpoints: (
+    "small": (min-width: 39.688em),
+    "medium": (min-width: 48em),
+    "wide": (min-width: 75em)
+  )
+  !default;
+
+/*sass breakpoint mixin som använder sass maps ovan*/
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately,
+      no value could be retrieved from `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/*font-icon*/
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+/*general styling*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+header,
+footer,
+body,
+nav,
+div,
+img,
+a,
+ul,
+li,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+// MOBILE
+.Articles{
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1em;
+  padding: 10px;
+}
+
+#Article-item{
+  overflow: hidden;
+  border-top: 1px solid black;
+}
+
+#Article-item img{
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-25%);
+  position: relative;
+}
+
+.Articles p {
+  text-align: center;
+  padding: 5px;
+}
+
+/*på desktopen visa inte mobil label*/
+@include respond-to("small") {
+  .Articles{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1em;
+    padding: 10px;
+}
+
+#Article-item{
+    overflow: hidden;
+    border-top: 1px solid black;
+}
+
+#Article-item img{
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%);
+    position: relative;
+}
+
+.Articles p {
+    text-align: center;
+}
+}
