@@ -2,9 +2,30 @@
 
 .main-grid{
     display: grid;
-    grid-template-rows: auto 40% auto auto;
+    grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
     grid-template-areas:
     "header header header header"
     "hero hero hero hero"
-    ". main main ."
+    ". main sidebar ."
+    "footer footer footer footer"
+}
+
+.hero{
+    grid-area: hero;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.footer{
+    grid-area: footer;
 }
