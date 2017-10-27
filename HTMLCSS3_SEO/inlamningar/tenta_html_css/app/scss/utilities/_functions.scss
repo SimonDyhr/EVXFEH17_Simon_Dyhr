@@ -1,1 +1,12 @@
 //All functions
+
+
+// Function for fetching the colors from the colormap in variables.scss
+@function color-map($key: '') {
+    @return map-get($color-map, $key);
+}
+
+// Function for fetching the FONTS from the fontmap in variables.scss
+@function font-map($key: '') {
+    @return map-get($font-map, $key);
+}
