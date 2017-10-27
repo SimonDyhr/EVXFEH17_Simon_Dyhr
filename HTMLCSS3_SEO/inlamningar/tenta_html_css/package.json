@@ -1,31 +1,37 @@
 {
-  "name": "inlamning6",
+  "name": "evxfeh17_html_tenta",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "HTML CSS Tenta",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimonDyhr/EVXFEH17_Simon_Dyhr.git"
+    "url": "git+https://github.com/mig-25/evxfeh17_html_tenta.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "tenta",
+    "html",
+    "css"
+  ],
+  "author": "Sohail Hasware <saab.viggen@live.se>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SimonDyhr/EVXFEH17_Simon_Dyhr/issues"
+    "url": "https://github.com/mig-25/evxfeh17_html_tenta/issues"
   },
-  "homepage": "https://github.com/SimonDyhr/EVXFEH17_Simon_Dyhr#readme",
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.5.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.2",
-    "run-sequence": "^2.2.0"
+  "homepage": "https://github.com/mig-25/evxfeh17_html_tenta#readme",
+  "dependencies": {
+    "browser-sync": "2.18.13",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-cache": "0.4.6",
+    "gulp-cssnano": "2.1.2",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "3.4.0",
+    "gulp-sass": "3.1.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-useref": "3.1.2",
+    "run-sequence": "2.2.0"
   }
 }
