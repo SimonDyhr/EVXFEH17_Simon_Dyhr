@@ -1,0 +1,21 @@
+.main{
+    grid-area: main;
+
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    ". card side ."
+}
+
+.card{
+    grid-area: card;
+}
+
+.sidebar{
+    grid-area: side;
+}
+.footer{
+    margin: auto;
+}

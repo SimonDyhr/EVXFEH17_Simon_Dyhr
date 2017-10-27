@@ -1,5 +1,46 @@
 // SASS for Header class including menu and other things
 
+.header{
+    // using color maps
+    background: color-map('dark');
+    color: color-map('bright');
+    height: 10em;
+    grid-area: header;
+}
+
+.header h1 {
+    color: yellow;
+    text-align: center;
+    padding-top: 80px;
+}
+
+// Hiding the toggle for mobile menu
+#nav-toggle{
+    display: none;
+}
+
+// if toggle gets checked in mobile
+#nav-toggle:checked + .header nav{
+    left:0;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+}
+
+.toggle{
+    font-size: 1.5em;
+}
+
+.toggle:hover{
+    color: red;
+}
+
+.toggle.close{
+    position: absolute;
+    right: 0;
+    padding-right: 1.5em;
+    font-size: 1.5em;
+}
+
 #nav {
     // using color and font maps
     background: color-map('accent3');
@@ -11,8 +52,37 @@
     height: 100%;
     width: 100%;
     max-width: 300px;
-    // left: -340px;
-    left: 0;
+    left: -340px;
     top:0;
     padding-top: 1.5em;
+
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+}
+
+
+@include respond-to("desktop"){
+    #nav {
+        left:0;
+        position: relative;
+        background: inherit;
+        height: auto;
+        padding-top: 0;
+        padding-left: 30px; //to center, because we use padding-right: 60px on LI later so we cut it in half to 30px
+        margin: auto;
+        font-size: 20px;
+    }
+
+    #nav ul li{
+        display: inline;
+        padding-right: 20px;
+    }
+
+    .toggle{
+        display: none;
+    }
+    
+    .toggle.close{
+        display: none;
+    }
 }

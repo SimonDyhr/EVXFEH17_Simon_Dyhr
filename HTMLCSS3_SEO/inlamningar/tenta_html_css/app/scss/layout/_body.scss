@@ -1,1 +1,10 @@
-// 
+//SASS for main-grid
+
+.main-grid{
+    display: grid;
+    grid-template-rows: auto 40% auto auto;
+    grid-template-areas:
+    "header header header header"
+    "hero hero hero hero"
+    ". main main ."
+}

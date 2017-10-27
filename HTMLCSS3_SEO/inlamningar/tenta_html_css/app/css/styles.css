@@ -47,6 +47,43 @@ a:active {
   text-decoration: none;
   color: inherit; }
 
+.main-grid {
+  display: grid;
+  grid-template-rows: auto 40% auto auto;
+  grid-template-areas: "header header header header" "hero hero hero hero" ". main main ."; }
+
+.header {
+  background: #282828;
+  color: #f5f5f5;
+  height: 10em;
+  grid-area: header; }
+
+.header h1 {
+  color: yellow;
+  text-align: center;
+  padding-top: 80px; }
+
+#nav-toggle {
+  display: none; }
+
+#nav-toggle:checked + .header nav {
+  left: 0;
+  -webkit-transition: 0.4s;
+  /* Safari */
+  transition: 0.4s; }
+
+.toggle {
+  font-size: 1.5em; }
+
+.toggle:hover {
+  color: red; }
+
+.toggle.close {
+  position: absolute;
+  right: 0;
+  padding-right: 1.5em;
+  font-size: 1.5em; }
+
 #nav {
   background: #1d8aaf;
   color: #f5f5f5;
@@ -55,8 +92,51 @@ a:active {
   height: 100%;
   width: 100%;
   max-width: 300px;
-  left: 0;
+  left: -340px;
   top: 0;
-  padding-top: 1.5em; }
+  padding-top: 1.5em;
+  -webkit-transition: 0.4s;
+  /* Safari */
+  transition: 0.4s; }
+
+@media (min-width: 60em) {
+  #nav {
+    left: 0;
+    position: relative;
+    background: inherit;
+    height: auto;
+    padding-top: 0;
+    padding-left: 30px;
+    margin: auto;
+    font-size: 20px; }
+
+  #nav ul li {
+    display: inline;
+    padding-right: 20px; }
+
+  .toggle {
+    display: none; }
+
+  .toggle.close {
+    display: none; } }
+.hero {
+  height: 50vh;
+  grid-area: hero; }
+
+.main {
+  grid-area: main;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: ". card side ."; }
+
+.card {
+  grid-area: card; }
+
+.sidebar {
+  grid-area: side; }
+
+.footer {
+  margin: auto; }
 
 /*# sourceMappingURL=styles.css.map */
