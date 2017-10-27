@@ -2,4 +2,27 @@
 
 .hero{
     height: 50vh;
+    width: 100%;
+    background-image: url('../images/portree.jpg');
+    background-size: cover;
+}
+
+.hero > h1, .hero > p{
+    // using color and font maps
+    color: color-map('bright');
+    font-family: font-map('default');
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero > h1{
+    font-size: 60px;
+}
+
+.hero > p {
+    font-size: 30px;
+    top: 30%
 }

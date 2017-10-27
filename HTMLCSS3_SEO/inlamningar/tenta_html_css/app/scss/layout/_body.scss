@@ -1,13 +1,16 @@
 //SASS for main-grid
 
 .main-grid{
+    background: #BBA2BB;
     display: grid;
-    grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+    grid-column-gap: 1.5em;
+    grid-template-columns: 100%;
     grid-template-areas:
-    "header header header header"
-    "hero hero hero hero"
-    ". main sidebar ."
-    "footer footer footer footer"
+    "header"
+    "hero"
+    "main"
+    "sidebar"
+    "footer"
 }
 
 .hero{
@@ -28,4 +31,17 @@
 
 .footer{
     grid-area: footer;
+}
+
+@include respond-to("desktop"){
+    .main-grid{
+        display: grid;
+        grid-column-gap: 1.5em;
+        grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+        grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        ". main sidebar ."
+        "footer footer footer footer"
+    }
 }

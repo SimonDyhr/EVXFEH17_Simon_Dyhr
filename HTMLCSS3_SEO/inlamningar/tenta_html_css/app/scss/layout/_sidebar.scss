@@ -1,0 +1,11 @@
+//SASS for sidebar
+
+.sidebar{
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.sidebar > h1, .sidebar > p{
+    color: black;
+    margin: 10px;
+}
