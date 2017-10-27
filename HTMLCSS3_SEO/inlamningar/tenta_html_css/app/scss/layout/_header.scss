@@ -1,0 +1,18 @@
+// SASS for Header class including menu and other things
+
+#nav {
+    // using color and font maps
+    background: color-map('accent3');
+    color: color-map('bright');
+    font-family: font-map('default');
+
+    // normal css for nav
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    // left: -340px;
+    left: 0;
+    top:0;
+    padding-top: 1.5em;
+}
