@@ -1,5 +1,5 @@
-div[class^="col-"] {    
+div[class^="col-"] {
     border: 1px solid black;
-    background: #D85252;
+    background: rgb(216, 82, 82);
     height: 200px;
 }
