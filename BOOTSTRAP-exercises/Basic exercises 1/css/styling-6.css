@@ -1,0 +1,11 @@
+div[class^="col-"] {
+    border: 1px solid black;
+    background: rgb(216, 82, 82);
+    min-height: 20px;
+}
+
+
+span{
+    padding: 20px;
+    font-size: 35px;
+}
