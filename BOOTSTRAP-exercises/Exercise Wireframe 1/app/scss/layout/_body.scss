@@ -1,0 +1,8 @@
+// body //
+body {
+  // using color maps
+  background: color-map('background');
+  font-family: font-map('default');
+  padding-top: 55px;
+  margin: auto;
+}

@@ -1,0 +1,50 @@
+/*general styling*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+header,
+footer,
+body,
+nav,
+div,
+img,
+a,
+ul,
+li,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  // font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Inga länkar skall vara understrukna och att den ska inherita färgen så den inte är blå eller något annat fult */
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  text-decoration: none;
+  color: inherit;
+}

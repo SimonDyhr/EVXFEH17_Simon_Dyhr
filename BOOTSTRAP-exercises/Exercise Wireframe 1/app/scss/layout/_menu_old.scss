@@ -1,0 +1,232 @@
+// Menu //
+
+
+/* Var tvungen att sätta @media här så jag inte stör desktopen sen */
+@media all and (max-width: 60em) {
+  /*Dold chekcbox som aldrig ska visas*/
+  #nav-toggle {
+    display: none;
+  }
+
+  /*Dold logo som inte ska visas förens i desktop*/
+  .logo {
+    display: none;
+  }
+
+  /*Men som används för att dölja och visa menyn på mobilen*/
+  #nav-toggle:checked + .wrapper nav {
+    position: fixed;
+    top: 55px;
+    left:0;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+  }
+
+  #nav-toggle + .wrapper #pilUpp {
+    display: none;
+  }
+  #nav-toggle + .wrapper #pilNer {
+    display: block;
+  }
+  #nav-toggle:checked + .wrapper #pilUpp {
+    display: block;
+  }
+  #nav-toggle:checked + .wrapper #pilNer {
+    display: none;
+  }
+
+  /* Menyn, för MOBILE döljs som standard */
+  nav {
+    position: fixed;
+    left: -1000px;
+    top:55px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 45px;
+    background: #ECECEC;
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.4s; /* Safari */
+    transition: 0.4s;
+    overflow: auto;
+    z-index: 3; /* Så att FIXED kommer över RELATIVE */
+  }
+
+  #labelForNavToggle{
+    background-color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    color: #565956;
+    display: block;
+    font-weight: bold;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 10px;
+    position: fixed;
+    top: 0;
+    z-index:3; /* Så att FIXED kommer över RELATIVE */
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+  }
+
+  #labelForNavToggle span{
+    float: right;
+    padding-right: 10px;
+  }
+}
+
+
+
+
+
+
+@include respond-to("desktop"){
+  /* Måste displaya NAV igen när man går tillbaks till Desktop */
+  nav{
+    display: block;
+    padding: 0;
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    min-width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 16px 0px rgba(136, 136, 136, 0.2);
+    margin: auto;
+    z-index:3; /* Så att FIXED kommer över RELATIVE */
+  }
+
+  /*Tecknet för mobil menyn döljs på desktop*/
+  #labelForNavToggle {
+    display:none;
+  }
+
+  #nav-toggle {
+    display: none;
+  }
+
+  /* Headern med huvudmenyn i */
+  #mainMenu {
+    text-align: center;
+    max-width: 75em;
+    margin: auto;
+  }
+
+  #mainMenu > li {
+    color: #565956;
+    right: 0;
+    float: right;
+  }
+
+  #mainMenu li a {
+    display: block;
+    padding: 17px 25px 17px 25px;
+  }
+
+  #mainMenu li > a:hover {
+    transition: width 0.2s;
+    background-color: #f7f7f7;
+  }
+
+  .logo{
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding-top: 13px;
+    padding-left: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.menu{
+//  background-color: rgba(255, 255, 255, 0.98);
+//  display: block;
+//  padding: 0;
+//  top: 0;
+//  padding-top: 27px;
+//  padding-bottom: 27px;
+//  position: fixed;
+//  width: 100%;
+//}
+//
+//.logo {
+//  display: block;
+//  padding: 0;
+//  top: 0;
+//  position: fixed;
+//  margin: auto;
+//}
+//
+//.menuItems{
+//  nav {
+//    display: block;
+//    padding: 0;
+//    top:0;
+//    position: fixed;
+//    margin: auto;
+//    z-index:3; /* Så att FIXED kommer över RELATIVE */
+//  }
+//
+//  ul {
+//    list-style-type: none;
+//    padding: 0px;
+//    margin: 0px;
+//    li {
+//      display: inline-block;
+//      padding-right: 20px;
+//      text-align: center;
+//      float: left; //float is used as a countermeausure for the whitespace created with the inline-block value.
+//      position: relative;
+//      margin: auto;
+//      color: #565956;
+//
+//      li::before{
+//        position: absolute;
+//        display: block;
+//        top: 10px;
+//        content: "/";
+//      }
+//      li:first-child::before{
+//        content: "";
+//      }
+//      a {
+//        color: #565956;
+//        display: block;
+//        padding-top: 15px;
+//        padding-bottom: 15px;
+//        font-weight: 500;
+//        text-decoration: none;
+//      }
+//      a:hover{
+//        transition: 0.1s;
+//        color: #000000;
+//      }
+//      a:after{
+//        border-right: 1px solid black;
+//      }
+//    }
+//  }
+//}

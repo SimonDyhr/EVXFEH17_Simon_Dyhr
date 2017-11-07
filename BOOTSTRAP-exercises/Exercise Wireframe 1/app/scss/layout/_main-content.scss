@@ -1,0 +1,118 @@
+// main-content //
+
+.main-content{
+  margin: auto;
+  padding-top: 20px;
+
+
+
+
+
+
+
+  .featureBoxes:first-child{
+    padding-top: 40px;
+  }
+
+  .featureBoxes {
+    padding-bottom: 40px;
+    max-width: 95%;
+    margin: auto;
+  }
+
+
+  .featureBoxes .section-heading {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .featureBoxes .section-description {
+    text-align: center;
+    margin: auto;
+    max-width: 90%;
+    padding-bottom: 70px;
+  }
+
+  .featureBoxes .feature-title {
+    padding-bottom: 10px;
+    padding-top: 5px;
+  }
+
+  @include respond-to("desktop") {
+    .featureBoxes .section-description {
+      text-align: center;
+      margin: auto;
+      max-width: 60%;
+      padding-bottom: 80px;
+    }
+  }
+
+  .featureBoxes .col-md-4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .featureBoxes i{
+    padding-bottom: 10px;
+    font-size: 55px;
+  }
+
+  .featureBoxes .col-md-4:nth-child(1) i {
+    color: #3498db;
+  }
+  .featureBoxes .col-md-4:nth-child(2) i {
+    color: #e74c3c;
+  }
+  .featureBoxes .col-md-4:nth-child(3) i {
+    color: #9b59b6;
+  }
+
+
+
+
+
+
+
+
+
+  .jumbotron{
+    background: #3498db;
+    font-size: 22px;
+    color: white;
+    border-radius: 0;
+    background-image: url('../images/wallhaven-578057.jpg');
+    margin-bottom: 100px;
+  }
+  .jumbotron button{
+    margin-top: 15px
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  hr {
+    margin: 30px 0 30px 0;
+  }
+
+  .featurette img{
+    border-radius: 10px;
+    height: auto;
+  }
+
+  .featurette:last-child {
+    margin-bottom: 70px;
+  }
+
+
+
+
+}
