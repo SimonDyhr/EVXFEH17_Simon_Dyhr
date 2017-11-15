@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@import url(https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+/*general styling*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+html,
+header,
+footer,
+body,
+nav,
+div,
+img,
+a,
+ul,
+li,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none; }
+
+/* Inga l├ñnkar skall vara understrukna och att den ska inherita f├ñrgen s├Ñ den inte ├ñr bl├Ñ eller n├Ñgot annat fult */
+a:link {
+  text-decoration: none;
+  color: inherit; }
+
+a:visited {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+a:active {
+  text-decoration: none;
+  color: inherit; }
+
+.main-grid {
+  background: #BBA2BB;
+  display: grid;
+  grid-column-gap: 1.5em;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "hero" "main" "sidebar" "footer"; }
+
+.hero {
+  grid-area: hero; }
+
+.header {
+  grid-area: header; }
+
+.main {
+  grid-area: main; }
+
+.sidebar {
+  grid-area: sidebar; }
+
+.footer {
+  grid-area: footer; }
+
+@media (min-width: 60em) {
+  .main-grid {
+    display: grid;
+    grid-column-gap: 1.5em;
+    grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+    grid-template-areas: "header header header header" "hero hero hero hero" ". main sidebar ." "footer footer footer footer"; } }
+.header {
+  background: #282828;
+  color: #f5f5f5;
+  height: 10em; }
+
+.header h1 {
+  color: yellow;
+  text-align: center;
+  padding-top: 80px; }
+
+#nav-toggle {
+  display: none; }
+
+#nav-toggle:checked + .header nav {
+  left: 0;
+  -webkit-transition: 0.4s;
+  /* Safari */
+  transition: 0.4s; }
+
+.toggle {
+  font-size: 1.5em; }
+
+.toggle:hover {
+  color: red; }
+
+.toggle.close {
+  position: absolute;
+  right: 0;
+  padding-right: 1.5em;
+  font-size: 1.5em; }
+
+#nav {
+  background: #1d8aaf;
+  color: #f5f5f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  left: -340px;
+  top: 0;
+  padding-top: 1.5em;
+  -webkit-transition: 0.4s;
+  /* Safari */
+  transition: 0.4s; }
+
+@media (min-width: 60em) {
+  #nav {
+    left: 0;
+    position: relative;
+    background: inherit;
+    height: auto;
+    padding-top: 0;
+    padding-left: 30px;
+    margin: auto;
+    font-size: 20px; }
+
+  #nav ul li {
+    display: inline;
+    padding-right: 20px; }
+
+  .toggle {
+    display: none; }
+
+  .toggle.close {
+    display: none; } }
+.hero {
+  height: 50vh;
+  width: 100%;
+  background-image: url("../images/portree.jpg");
+  background-size: cover; }
+
+.hero > h1, .hero > p {
+  color: #f5f5f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.hero > h1 {
+  font-size: 60px; }
+
+.hero > p {
+  font-size: 30px;
+  top: 30%; }
+
+.main > h1 {
+  color: white;
+  margin: 10px; }
+
+.main-content {
+  min-height: 100vh;
+  margin-bottom: 1em; }
+
+.card {
+  display: grid;
+  grid-column-gap: 1.5em;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "img title" "img content";
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.card-image {
+  grid-area: img; }
+
+.card-image > img {
+  width: 100%; }
+
+.card-title {
+  grid-area: title; }
+
+.card-content {
+  grid-area: content; }
+
+.footer {
+  margin: auto;
+  height: 10em; }
+
+.sidebar {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85); }
+
+.sidebar > h1, .sidebar > p {
+  color: black;
+  margin: 10px; }
+
+/*# sourceMappingURL=styles.css.map */
