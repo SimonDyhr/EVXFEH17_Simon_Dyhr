@@ -47,161 +47,279 @@ a:active {
   text-decoration: none;
   color: inherit; }
 
-.main-grid {
-  background: #BBA2BB;
+body {
+  max-width: 1280px;
+  background: #48A7F5;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #48A7F5 0%, #f5f5f5 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48A7F5), color-stop(100%, #f5f5f5));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #48A7F5 0%, #f5f5f5 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #48A7F5 0%, #f5f5f5 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #48A7F5 0%, #f5f5f5 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #48A7F5 0%, #f5f5f5 100%);
+  /* W3C */
+  margin: auto;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+.denver-post {
+  width: 100%;
+  border-bottom: #282828 solid 10px;
+  margin: auto; }
+
+.denver-post h1 {
+  font-size: 7.1vw;
+  text-align: center;
+  color: #f5f5f5; }
+
+.ski-holiday-resort {
+  border: 1px solid #282828;
+  text-align: center;
+  width: 100%;
+  color: #f5f5f5; }
+
+.ski-holiday-resort h3:nth-child(1) {
+  border-bottom: 2px solid #282828;
+  padding: 10px;
+  width: 75px;
+  margin: auto; }
+
+.ski-holiday-resort h3:nth-child(3) {
+  border-top: 2px solid #282828;
+  padding: 10px;
+  width: 75px;
+  margin: auto; }
+
+.ski-holiday-resort h1 {
+  font-style: italic; }
+
+.small-add {
+  padding-top: 10px; }
+
+.article-header p {
+  font-size: 6.5vw;
+  color: #282828;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+.article-header h3 {
+  color: #282828;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+.page-text p {
+  color: #282828;
+  margin: auto; }
+
+.page-text button {
+  background: none;
+  border: 1px solid #282828;
+  width: 100%;
+  padding: 20px;
+  margin: auto; }
+
+.article-body {
+  padding: 10px 0 10px 0; }
+
+.hero-image {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/rockies.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  border: 20px solid #333; }
+  .hero-image .text-inside {
+    padding: 10px; }
+    .hero-image .text-inside h5 {
+      border-bottom: 1px solid #282828; }
+    .hero-image .text-inside h2 {
+      font-size: 6.2rem; }
+    .hero-image .text-inside .white-text {
+      color: white; }
+
+.community .text-above {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.community .text-above h2:nth-child(2) {
+  font-style: italic; }
+.community .images img {
+  width: 100%;
+  height: auto; }
+.community .grid-items {
   display: grid;
-  grid-column-gap: 1.5em;
-  grid-template-columns: 100%;
-  grid-template-areas: "header" "hero" "main" "sidebar" "footer"; }
+  grid-template-columns: 48% 48%;
+  grid-gap: 20px; }
 
-.hero {
-  grid-area: hero; }
+@media (min-width: 46.875em) {
+  .community .grid-items {
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-gap: 20px; }
 
-.header {
-  grid-area: header; }
+  .article-header p {
+    text-align: right; }
 
-.main {
-  grid-area: main; }
+  .article-header h3 {
+    color: #282828;
+    text-align: right;
+    padding: 0 30px 0 0;
+    margin: 0; }
 
-.sidebar {
-  grid-area: sidebar; }
+  .article-body {
+    padding-left: 20px; } }
+.page-footer {
+  padding-top: 25px; }
 
 .footer {
-  grid-area: footer; }
+  padding: 20px;
+  background: #eeeeee; }
+  .footer .title-above p {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #282828; }
+  .footer .grid-items {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 48% 48%; }
+  .footer ul li {
+    padding: 3px; }
 
-@media (min-width: 60em) {
+@media (min-width: 46.875em) {
+  .footer .grid-items {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-gap: 20px; } }
+@media (min-width: 75em) {
+  .page-footer {
+    padding-top: 0px;
+    display: grid; }
+
+  .footer .grid-items {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0; } }
+@media (min-width: 46.875em) {
   .main-grid {
     display: grid;
-    grid-column-gap: 1.5em;
-    grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
-    grid-template-areas: "header header header header" "hero hero hero hero" ". main sidebar ." "footer footer footer footer"; } }
-.header {
-  background: #282828;
-  color: #f5f5f5;
-  height: 10em; }
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-areas: "header header header header header" "skibox skibox skibox skibox skibox" "contentTitle contentTitle contentText contentText contentText" "hero hero hero hero hero" "gallery gallery gallery gallery gallery" "footer footer footer footer footer"; }
 
-.header h1 {
-  color: yellow;
-  text-align: center;
-  padding-top: 80px; }
+  .page-introduction {
+    grid-area: header; }
 
-#nav-toggle {
-  display: none; }
+  .small-add {
+    grid-area: skibox; }
 
-#nav-toggle:checked + .header nav {
-  left: 0;
-  -webkit-transition: 0.4s;
-  /* Safari */
-  transition: 0.4s; }
+  .article-header {
+    grid-area: contentTitle; }
 
-.toggle {
-  font-size: 1.5em; }
+  .article-body {
+    grid-area: contentText; }
 
-.toggle:hover {
-  color: red; }
+  .hero-image {
+    grid-area: hero; }
 
-.toggle.close {
-  position: absolute;
-  right: 0;
-  padding-right: 1.5em;
-  font-size: 1.5em; }
+  .community {
+    grid-area: gallery;
+    display: flex; }
 
-#nav {
-  background: #1d8aaf;
-  color: #f5f5f5;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  max-width: 300px;
-  left: -340px;
-  top: 0;
-  padding-top: 1.5em;
-  -webkit-transition: 0.4s;
-  /* Safari */
-  transition: 0.4s; }
+  .page-footer {
+    grid-area: footer; } }
+@media (min-width: 52.5em) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-areas: "header header header header header header header header header header" "skibox skibox contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle" "hero hero hero hero hero hero hero contentText contentText contentText" "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery" "footer footer footer footer footer footer footer footer footer footer"; }
 
-@media (min-width: 60em) {
-  #nav {
-    left: 0;
-    position: relative;
-    background: inherit;
-    height: auto;
-    padding-top: 0;
-    padding-left: 30px;
-    margin: auto;
-    font-size: 20px; }
+  .page-introduction {
+    grid-area: header; }
 
-  #nav ul li {
-    display: inline;
-    padding-right: 20px; }
+  .small-add {
+    grid-area: skibox; }
 
-  .toggle {
-    display: none; }
+  .article-header {
+    grid-area: contentTitle;
+    align-self: flex-end; }
 
-  .toggle.close {
-    display: none; } }
-.hero {
-  height: 50vh;
-  width: 100%;
-  background-image: url("../images/portree.jpg");
-  background-size: cover; }
+  .article-body {
+    grid-area: contentText; }
 
-.hero > h1, .hero > p {
-  color: #f5f5f5;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
+  .hero-image {
+    grid-area: hero; }
 
-.hero > h1 {
-  font-size: 60px; }
+  .community {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-gap: 20px; }
 
-.hero > p {
-  font-size: 30px;
-  top: 30%; }
+  .page-footer {
+    grid-area: footer; } }
+@media (min-width: 75em) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-areas: "header header header header header header header header header header" "skibox skibox skibox contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle" "footer footer hero hero hero hero hero hero contentText contentText" "footer footer gallery gallery gallery gallery gallery gallery gallery gallery"; }
 
-.main > h1 {
-  color: white;
-  margin: 10px; }
+  .page-introduction {
+    grid-area: header; }
 
-.main-content {
-  min-height: 100vh;
-  margin-bottom: 1em; }
+  .small-add {
+    grid-area: skibox; }
 
-.card {
-  display: grid;
-  grid-column-gap: 1.5em;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "img title" "img content";
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .article-header {
+    grid-area: contentTitle; }
 
-.card-image {
-  grid-area: img; }
+  .article-body {
+    grid-area: contentText; }
 
-.card-image > img {
-  width: 100%; }
+  .hero-image {
+    grid-area: hero; }
 
-.card-title {
-  grid-area: title; }
+  .community {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 20px; }
 
-.card-content {
-  grid-area: content; }
+  .page-footer {
+    grid-area: footer; } }
+@media (min-width: 87.5em) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-areas: "header header header header header header header header header header" "skibox skibox skibox . contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle" "footer footer hero hero hero hero hero hero contentText contentText" "footer footer gallery gallery gallery gallery gallery gallery gallery gallery"; }
 
-.footer {
-  margin: auto;
-  height: 10em; }
+  .page-introduction {
+    grid-area: header; }
 
-.sidebar {
-  height: 100%;
-  background: rgba(255, 255, 255, 0.85); }
+  .small-add {
+    grid-area: skibox; }
 
-.sidebar > h1, .sidebar > p {
-  color: black;
-  margin: 10px; }
+  .article-header {
+    grid-area: contentTitle; }
+
+  .article-body {
+    grid-area: contentText; }
+
+  .hero-image {
+    grid-area: hero; }
+
+  .community {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 20px; }
+
+  .page-footer {
+    grid-area: footer; } }
 
 /*# sourceMappingURL=styles.css.map */

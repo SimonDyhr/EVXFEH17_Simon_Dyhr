@@ -1,0 +1,132 @@
+// CSS Code for Page-MainContent //
+
+
+// Title above content text
+.article-header p{
+    font-size: 6.5vw;
+    color: color-map('dark');
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.article-header h3{
+    color: color-map('dark');
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+// content text
+.page-text p{
+    color: color-map('dark');
+    margin: auto;
+}
+
+.page-text button{
+    background: none;
+    border: 1px solid color-map('dark');
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+// only added for extra styling
+.article-body {
+    padding: 10px 0 10px 0;
+}
+
+
+
+
+
+
+// HERO using background for the image with a small white tint
+.hero-image{
+    background: linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), url("../images/rockies.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    border: 20px solid #333;
+
+    .text-inside{
+        padding: 10px;
+
+        h5{
+            border-bottom: 1px solid color-map('dark');
+        }
+
+        h2  {
+            font-size: 6.2rem;
+        }
+        .white-text{
+            color: white;
+        }
+    }
+}
+
+
+
+
+
+
+// The community
+.community {
+    .text-above{
+        text-align: center;
+        //font-size: 2.8rem; <--- La in det, men fonten blir jätte stor så tror du kanske skrivit fel storlek i beskrivningen?
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .text-above h2:nth-child(2){
+        font-style: italic;
+    }
+
+    .images img{
+        width: 100%;
+        height: auto;
+    }
+
+    .grid-items{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 20px;
+    }
+}
+
+
+
+
+// @750px
+@include respond-to("small"){
+    .community {
+        .grid-items{
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-gap: 20px;
+        }
+    }
+    .article-header p{
+        text-align: right;
+    }
+
+    .article-header h3{
+        color: color-map('dark');
+        text-align: right;
+        padding: 0 30px 0 0;
+        margin: 0;
+    }
+
+    .article-body{
+        padding-left: 20px;
+    }
+}
+
+
+
+
+
+

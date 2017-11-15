@@ -30,7 +30,10 @@ $font-map: (
 
 /// Breakpoint map
 $breakpoints: (
-  'desktop':  ( min-width: 60em )
+  'small':  ( min-width:  46.875em ),
+  'medium': ( min-width:  52.5em ),
+  'large':  ( min-width: 75em ),
+  'wide':  ( min-width: 87.5em )
 ) !default;
 
 

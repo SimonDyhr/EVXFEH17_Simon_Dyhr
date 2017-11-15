@@ -1,0 +1,203 @@
+// CSS Code for the CSS grids //
+
+
+
+
+// @750px
+@include respond-to("small"){
+    .main-grid{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+
+        grid-template-areas:
+        "header header header header header"
+        "skibox skibox skibox skibox skibox"
+        "contentTitle contentTitle contentText contentText contentText"
+        "hero hero hero hero hero"
+        "gallery gallery gallery gallery gallery"
+        "footer footer footer footer footer"
+    }
+
+    .page-introduction{
+        grid-area: header;
+    }
+
+    .small-add{
+        grid-area: skibox;
+    }
+
+
+    .article-header {
+        grid-area: contentTitle;
+    }
+
+    .article-body {
+        grid-area: contentText;
+    }
+
+    .hero-image {
+        grid-area: hero;
+    }
+
+
+    .community {
+        grid-area: gallery;
+        display: flex;
+    }
+
+    .page-footer{
+        grid-area: footer;
+    }
+    
+}
+
+
+
+// @840px
+@include respond-to("medium"){
+    .main-grid{
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas:
+        "header header header header header header header header header header"
+        "skibox skibox contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle"
+        "hero hero hero hero hero hero hero contentText contentText contentText"
+        "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
+        "footer footer footer footer footer footer footer footer footer footer"
+    }
+
+    .page-introduction{
+        grid-area: header;
+    }
+
+    .small-add{
+        grid-area: skibox;
+    }
+
+
+    .article-header {
+        grid-area: contentTitle;
+        align-self: flex-end;
+    }
+
+    .article-body {
+        grid-area: contentText;
+    }
+
+    .hero-image {
+        grid-area: hero;
+    }
+
+
+    .community {
+        grid-area: gallery;
+
+        display: grid;
+        grid-template-columns: 35% 65%;
+        grid-gap: 20px;
+    }
+
+    .page-footer{
+        grid-area: footer;
+    }
+}
+
+
+
+
+// @1200px
+@include respond-to("large"){
+    .main-grid{
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas:
+        "header header header header header header header header header header"
+        "skibox skibox skibox contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle"
+        "footer footer hero hero hero hero hero hero contentText contentText"
+        "footer footer gallery gallery gallery gallery gallery gallery gallery gallery"
+    }
+
+    .page-introduction{
+        grid-area: header;
+    }
+
+    .small-add{
+        grid-area: skibox;
+    }
+
+
+    .article-header {
+        grid-area: contentTitle;
+    }
+
+    .article-body {
+        grid-area: contentText;
+    }
+
+    .hero-image {
+        grid-area: hero;
+    }
+
+
+    .community {
+        grid-area: gallery;
+
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 20px;
+    }
+
+    .page-footer{
+        grid-area: footer;
+    }
+}
+
+
+
+
+// @1400px
+@include respond-to("wide"){
+    .main-grid{
+        display: grid;
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas:
+        "header header header header header header header header header header"
+        "skibox skibox skibox . contentTitle contentTitle contentTitle contentTitle contentTitle contentTitle"
+        "footer footer hero hero hero hero hero hero contentText contentText"
+        "footer footer gallery gallery gallery gallery gallery gallery gallery gallery"
+    }
+
+    .page-introduction{
+        grid-area: header;
+    }
+
+    .small-add{
+        grid-area: skibox;
+    }
+
+
+    .article-header {
+        grid-area: contentTitle;
+    }
+
+    .article-body {
+        grid-area: contentText;
+    }
+
+    .hero-image {
+        grid-area: hero;
+    }
+
+
+    .community {
+        grid-area: gallery;
+
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-gap: 20px;
+    }
+
+    .page-footer{
+        grid-area: footer;
+    }
+}

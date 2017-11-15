@@ -1,0 +1,18 @@
+// CSS Code for BODY using COLOR MAP and FONT MAP here!!!//
+body{
+    max-width: 1280px;
+
+    // Gjorde en MIXIN istället för VG-delen
+    // background: color-map('main'); /* For browsers that do not support gradients */
+    // background: -webkit-linear-gradient(color-map('main'), color-map('bright')); /* For Safari 5.1 to 6.0 */
+    // background: -o-linear-gradient(color-map('main'), color-map('bright')); /* For Opera 11.1 to 12.0 */
+    // background: -moz-linear-gradient(color-map('main'), color-map('bright')); /* For Firefox 3.6 to 15 */
+    // background: linear-gradient(color-map('main'), color-map('bright')); /* Standard syntax (must be last) */
+
+    // Mixin gradient
+    @include linearGradient(color-map('main'), color-map('bright'));
+    
+    margin: auto;
+    padding: 10px;
+    font-family: font-map('default');
+}

@@ -1,0 +1,57 @@
+// CSS Code for Page-footer //
+.page-footer{
+    padding-top: 25px;
+}
+
+.footer {
+    padding: 20px;
+    background: #eeeeee;
+    
+    .title-above p{
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid color-map('dark');
+    }
+
+    .grid-items{
+        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 48% 48%;
+    }
+
+    
+
+    ul li {
+        padding: 3px;
+    }
+}
+
+
+// @750px
+@include respond-to("small"){
+    .footer {
+        .grid-items{
+            padding-top: 10px;
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-gap: 20px;
+        }
+    }
+}
+
+// @1200px
+@include respond-to("large"){
+
+    .page-footer{
+        padding-top: 0px;
+        display: grid;
+    }
+
+    .footer {
+        .grid-items{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-gap: 0;
+        }
+    }
+}

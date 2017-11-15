@@ -1,0 +1,46 @@
+// CSS Code for Page-introduction //
+
+// the title on top of the page
+.denver-post{
+    width: 100%;
+    border-bottom: color-map('dark') solid 10px;
+    margin: auto;
+}
+
+.denver-post h1{
+    font-size: 7.1vw;
+    text-align: center;
+    color: color-map('bright');
+}
+
+
+
+// the small ad on top of the page, beneath the title
+.ski-holiday-resort{
+    border: 1px solid color-map('dark');
+    text-align: center;
+    width: 100%;
+    color: color-map('bright');
+}
+
+.ski-holiday-resort h3:nth-child(1){
+    border-bottom: 2px solid color-map('dark');
+    padding:10px;
+    width: 75px;
+    margin: auto;    
+}
+
+.ski-holiday-resort h3:nth-child(3){
+    border-top: 2px solid color-map('dark');
+    padding:10px;
+    width: 75px;
+    margin: auto;    
+}
+
+.ski-holiday-resort h1{
+    font-style: italic;
+}
+
+.small-add{
+    padding-top: 10px;
+}
